@@ -25,12 +25,12 @@ pub struct BatchNormConfig {
 /// `Y = norm(X) * γ + β`
 #[derive(Module, Debug)]
 pub struct BatchNorm<B: Backend, const D: usize> {
-    gamma: Param<Tensor<B, 1>>,
-    beta: Param<Tensor<B, 1>>,
-    running_mean: RunningState<Tensor<B, 1>>,
-    running_var: RunningState<Tensor<B, 1>>,
-    momentum: f64,
-    epsilon: f64,
+    pub gamma: Param<Tensor<B, 1>>,
+    pub beta: Param<Tensor<B, 1>>,
+    pub running_mean: RunningState<Tensor<B, 1>>,
+    pub running_var: RunningState<Tensor<B, 1>>,
+    pub momentum: f64,
+    pub epsilon: f64,
 }
 
 impl BatchNormConfig {

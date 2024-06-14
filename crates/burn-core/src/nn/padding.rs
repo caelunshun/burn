@@ -46,7 +46,7 @@ pub enum PaddingConfig2d {
 }
 
 impl PaddingConfig2d {
-    pub(crate) fn calculate_padding_2d(
+    pub fn calculate_padding_2d(
         &self,
         height: usize,
         width: usize,

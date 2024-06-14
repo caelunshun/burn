@@ -29,12 +29,12 @@ pub struct GroupNormConfig {
 /// `Y = groupnorm(X) * γ + β`
 #[derive(Module, Debug)]
 pub struct GroupNorm<B: Backend> {
-    num_groups: usize,
-    num_channels: usize,
-    gamma: Option<Param<Tensor<B, 1>>>,
-    beta: Option<Param<Tensor<B, 1>>>,
-    epsilon: f64,
-    affine: bool,
+   pub  num_groups: usize,
+    pub num_channels: usize,
+    pub  gamma: Option<Param<Tensor<B, 1>>>,
+    pub  beta: Option<Param<Tensor<B, 1>>>,
+    pub   epsilon: f64,
+    pub  affine: bool,
 }
 
 impl GroupNormConfig {

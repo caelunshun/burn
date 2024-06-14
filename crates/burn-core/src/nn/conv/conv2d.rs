@@ -54,11 +54,11 @@ pub struct Conv2d<B: Backend> {
     pub weight: Param<Tensor<B, 4>>,
     /// Tensor of shape `[channels_out]`
     pub bias: Option<Param<Tensor<B, 1>>>,
-    stride: [usize; 2],
-    kernel_size: [usize; 2],
-    dilation: [usize; 2],
-    groups: usize,
-    padding: PaddingConfig2d,
+    pub stride: [usize; 2],
+    pub kernel_size: [usize; 2],
+    pub dilation: [usize; 2],
+    pub groups: usize,
+    pub padding: PaddingConfig2d,
 }
 
 impl Conv2dConfig {
