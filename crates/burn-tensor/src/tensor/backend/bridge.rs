@@ -5,7 +5,7 @@ use super::Backend;
 /// Allows tensors to be transferred between backends efficiently.
 pub trait BackendBridge<Origin: Backend>: Send + Sync + core::fmt::Debug {
     /// The target backend
-    type Target: Backend;
+    type Target: Backend<Device = Origin::Device>;
 
     /// Transfer the tensor to the target backend.
     fn into_target<const D: usize>(
